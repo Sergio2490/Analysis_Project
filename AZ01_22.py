@@ -13,3 +13,8 @@ df = pd.DataFrame(data)  #Сделали из словаря датафрейм
 #2-й вариант
 df.boxplot(column='value')
 plt.show()
+#print(df.describe())
+
+Q1 = df['value'].quantile(0.25)
+Q3 = df['value'].quantile(0.76)
+IQR = Q3 - Q1  #IQR - межквартильный размах
