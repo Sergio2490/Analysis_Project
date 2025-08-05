@@ -18,3 +18,7 @@ plt.show()
 Q1 = df['value'].quantile(0.25)
 Q3 = df['value'].quantile(0.76)
 IQR = Q3 - Q1  #IQR - межквартильный размах
+
+downside = Q1 - 1.5 * IQR  #нижняя граница
+upside = Q3 + 1.5 * IQR  #верхняя граница
+
