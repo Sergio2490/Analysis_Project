@@ -22,3 +22,7 @@ IQR = Q3 - Q1  #IQR - межквартильный размах
 downside = Q1 - 1.5 * IQR  #нижняя граница
 upside = Q3 + 1.5 * IQR  #верхняя граница
 
+df_new = df[(df['value'] >= downside) & (df['value'] <= upside)]  #убираем выбросы, берем значения только из диапазона
+
+df_new.boxplot(column='value')
+plt.show()
