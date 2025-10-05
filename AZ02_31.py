@@ -15,3 +15,5 @@ df = pd.DataFrame(data)
 df['gender'] = df['gender'].astype('category')
 df['department'] = df['department'].astype('category')
 
+print(df['gender'].cat.categories)
+print(df['department'].cat.categories)
