@@ -1,3 +1,4 @@
+# 1) Линейный график
 import matplotlib.pyplot as plt
 
 x = [2, 6, 8,14, 20]
