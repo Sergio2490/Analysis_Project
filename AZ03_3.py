@@ -24,4 +24,5 @@ with open('prices.csv', 'w', newline='', encoding='utf-8-sig') as file:
         writer.writerow([price.text])
 
     print("Цены успешно сохранены в prices.csv")
+
     driver.quit()
