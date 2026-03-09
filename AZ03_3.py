@@ -1,3 +1,4 @@
+# Парсинг цен в csv файл из видео
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
