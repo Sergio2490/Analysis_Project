@@ -10,7 +10,7 @@ url = 'https://www.divan.ru/kirov/category/divany-i-kresla'
 #headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
 html = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'}).text
 
-# Ищем все span с data-testid="price" и забираем число
+# Ищем все span с data-testid="price" и забираем число. В коде html: <span data-testid="price">84 054 <span>
 prices = re.findall(r'data-testid="price">(\d{1,3}(?: \d{3})*)', html)
 prices = [int(p.replace(' ', '')) for p in prices]
 
